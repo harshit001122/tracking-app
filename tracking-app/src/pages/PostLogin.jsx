@@ -21,10 +21,9 @@ const PostLogin = () => {
   };
 
   const handleShare = () => {
-    const shareUrl = `${window.location.origin}/shared?time=${time.toISOString()}&speed=${speed}`;
-    navigator.clipboard.writeText(shareUrl).then(() => {
-      alert('URL copied to clipboard: ' + shareUrl);
-    });
+    const url = `${window.location.origin}/post-login?speed=${speed}`;
+    navigator.clipboard.writeText(url);
+    alert('URL copied to clipboard!');
   };
 
   const getClockHandsStyle = (date) => {
